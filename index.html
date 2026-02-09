@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remote Functions Demo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1rem;
+    }
+
+    #app {
+      max-width: 520px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.25rem;
+      color: #fff;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .subtitle code {
+      background: #2a2a4a;
+      padding: 0.15em 0.4em;
+      border-radius: 3px;
+      font-size: 0.85em;
+      color: #a78bfa;
+    }
+
+    form {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #16213e;
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #a78bfa;
+    }
+
+    button[type="submit"] {
+      padding: 0.6rem 1.2rem;
+      background: #7c3aed;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    button[type="submit"]:hover { background: #6d28d9; }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0.8rem;
+      background: #16213e;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      border: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    li:hover { border-color: #333; }
+
+    li.done span {
+      text-decoration: line-through;
+      color: #666;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      flex: 1;
+    }
+
+    input[type="checkbox"] {
+      accent-color: #7c3aed;
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    li button {
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0 0.3rem;
+      line-height: 1;
+    }
+
+    li button:hover { color: #ef4444; }
+
+    .empty {
+      text-align: center;
+      color: #666;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading...</div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
