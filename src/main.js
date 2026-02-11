@@ -76,5 +76,6 @@ function render(todos) {
 }
 
 // Initial load
-const todos = await getTodos();
-render(todos);
+ getTodos().then(
+	todos => render(todos)
+ )

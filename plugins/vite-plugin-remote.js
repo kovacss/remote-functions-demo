@@ -68,12 +68,6 @@ export default function remotePlugin() {
 					const mod = await devServer.ssrLoadModule(filePath);
 					const fn = mod[name];
 
-					if (!fn || fn.__?.type !== 'command') {
-						res.statusCode = 404;
-						res.setHeader('Content-Type', 'application/json');
-						res.end(JSON.stringify({ type: 'error', message: `"${name}" is not a command`, status: 404 }));
-						return;
-					}
 
 					const { payload } = JSON.parse(body || '{}');
 

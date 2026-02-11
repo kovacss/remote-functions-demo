@@ -25,12 +25,6 @@ export function command(fn) {
 	// that the Vite plugin reads to know this is a "command"
 	const wrapper = (...args) => fn(...args);
 
-	// Attach metadata (same pattern as SvelteKit's RemoteInfo)
-	// The Vite plugin checks `value?.__?.type` to identify remote functions
-	Object.defineProperty(wrapper, '__', {
-		value: { type: 'command' },
-		enumerable: false
-	});
 
 	return wrapper;
 }
