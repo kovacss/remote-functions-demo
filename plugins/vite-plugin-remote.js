@@ -36,7 +36,7 @@ export default function remotePlugin() {
 	const remoteModules = new Map();
 
 	return {
-		name: 'vite-plugin-remote',
+		name: 'vite-plugin-remote-function',
 
 		configureServer(devServer) {
 			server = devServer;
@@ -121,6 +121,8 @@ export default function remotePlugin() {
 				.map(([name]) => {
 					return `export const ${name} = command('${fileHash}/${name}');`;
 				});
+
+			console.log("exports", exports)
 
 			if (exports.length === 0) return;
 
